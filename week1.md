@@ -205,16 +205,6 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 ![https://img-blog.csdn.net/20180917091716299?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
 
-|Tables     |Are       |Cool|
-|-----------|:--------:|---:|
-|col1 3 is  |right-alig|$160|
-
-```
-    java
-        public static void main(string []args){
-          system.out.println("hello!");
-        }
- ```
 
 
 
