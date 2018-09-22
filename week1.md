@@ -209,5 +209,12 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 |-----------|:--------:|---:|
 |col1 3 is  |right-alig|$160|
 
+```
+    java
+        public static void main(string []args){
+          system.out.println("hello!");
+        }
+ ```
+
 
 
