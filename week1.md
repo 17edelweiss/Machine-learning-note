@@ -113,70 +113,70 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 下图(左)中的红色X代表房子实际交易价格，θ0=0时，假设函数是过原点的直线，对于每一条假设函数，它的预测值和实际值的差的平方也就是下图(左)中蓝色竖线的长度的平方。在下图(右)做出相应的代价函数J(θ1)的图像，显然，当θ1=1时，J(θ1)最小。
 
-![https://img-blog.csdn.net/20180916091429981?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/16.png?raw=true)
 
-![https://img-blog.csdn.net/20180916093533292?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/17.png?raw=true)
 
 学习算法的优化目的是找到一个最优的θ1，使得J(θ1)最小化，显然由图可知当θ1=1时，J(θ1)取得最小值。 我们绘制一个等高线图，三个坐标分别为θ0和θ1和J(θ0,θ1)。如下图所示，这是一个类似碗状形状的图像，竖直高度即是J(θ0,θ1)。
 
-![https://img-blog.csdn.net/20180916093959310?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/18.png?raw=true)
 
 也可以在二维图中用下图进行表示，每一个椭圆形显示了一系列J(θ0,θ1)值相等的点，例如下图右中的三个点，他们的J(θ0,θ1)值相等，这些同心椭圆的中心点(碗状底部)就是最小值。
 
-![https://img-blog.csdn.net/20180916094718119?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/19.png?raw=true)
 
-![https://img-blog.csdn.net/20180916095334776?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/20.png?raw=true)
 
-![https://img-blog.csdn.net/2018091609543185?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/21.png?raw=true)
 
-![https://img-blog.csdn.net/20180916095708979?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/22.png?raw=true)
 
 ### 2.3   Gradient   descent（梯度下降法）：
 
 梯度下降法可以最小化代价函数J。为了简洁起见，假设这里只有两个参数θ0和θ1，梯度下降的思路是先给θ0和θ1赋初值，到底需要赋什么值其实并不重要，但通常的选择是让θ0设为0，θ1也设为0，然后不停地一点点地改变θ0和θ1来使得J(θ0,θ1)变小，直到我们找到J(θ0,θ1)的最小值或者局部最小值。
 
-![https://img-blog.csdn.net/2018091610201493?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/23.png?raw=true)
 
 让我们通过一些图片来看看梯度下降法是如何工作的，假设要让下图这个函数值最小化。
 
-![https://img-blog.csdn.net/20180916102438470?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/24.png?raw=true)
 
 首先对θ0和θ1赋以某个初值，也就是对应于从这个函数表面上的某个点出发，不管θ0和θ1的取值是多少，假设将它们都初始化为0，但有时你也可以把它们初始化为其他值。现在把这个图像想象为一座山，想象一下你正站在下图所示点处。在梯度下降算法中，我们要做的就是旋转360度，看看周围，并问自己，如果在某个方向上走一小步，朝哪个方向走才能尽快走下山？
 
-![https://img-blog.csdn.net/20180916102742617?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/25.png?raw=true)
 
 每次都往倾斜度最大的方向迈一小步，直到到达局部最低点，所以所走路径大致为下图。
 
-![https://img-blog.csdn.net/20180916103421912?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/26.png?raw=true)
 
 梯度下降有一个有趣的特点，对于不同的起始点，可能会得到不同的局部最优解，例如下图。
 
-![https://img-blog.csdn.net/20180916103704882?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/27.png?raw=true)
 
-![https://img-blog.csdn.net/20180916105736346?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/28.png?raw=true)
 
 上图就是梯度下降算法的数学定义，这个公式有很多细节问题，首先注意这个符号“:=”，我们使用“:=”表示赋值，这是一个赋值运算符，例如a:=b，在计算机中，这意味着将b的值赋给a。而如果写a=b，那么这是一个真假判定，其实就是在断言a的值等于b的值。这里的α是学习率（learning rate），α用来控制梯度下降时，我们需要迈出多大的步子。如果α值很大，梯度下降就很迅速，也就是我们会用大步子下山。如果α值很小，我们会用小碎步下山。还有一个关于梯度下降法的细节，我们要更新θ0和θ1，当j=0和j=1时，会产生更新，实现梯度下降算法的微妙之处是，对于这个表达式，我们需要同时更新θ0和θ1，θ0更新为θ0减去某项，θ1更新为θ1减去某项，实现方法是计算表达式等式右边的部分，然后同时更新θ0和θ1。事实发现，同步更新是更自然的实现方法。如果用非同步更新去实现算法，可能也会正确工作，但是这种方法并不是人们通常用的那个梯度下降算法，而是具有不同性质的其他算法。由于各种原因，这其中会表现出微小的差别。所以我们需要做的就是在梯度下降算法中实现同步更新。
 
 接下来进一步解释这个数学定义：
-![https://img-blog.csdn.net/20180916144452222?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/29.png?raw=true)
 
 这是关于实数θ1的代价函数J(θ1)，横轴表示θ1，纵轴表示J(θ1)。第一幅图中从θ1处开始梯度下降，梯度下降要做的就是不断更新θ1。在微积分中这一点的导数其实就是这一点的切线，就是那条红色的直线，这条直线的斜率为正，也就是说它有正导数，所以θ1就更新为θ1-α*(一个正数)，α也就是学习速率永远是一个正数，所以我们就相当于将θ1左移，使θ1变小了。我们看到这么做是对的，因为往左移实际上是在向最低点靠近。在第二幅图中，用同样的代价函数J(θ1)，再作出同样的图像。而这次把参数初始化到左边那个点，现在的导数项也就是这点的切线的斜率，这条切线的斜率是负的，所以这个函数有负导数，这个导数项是小于0的，所以当更新θ1时，θ1被更新为θ1-α*(一个负数)，所以实际上θ1在增大，也就是向右移动，也是在接近最低点。这就是导数项的意义。
 
 接下来看一看学习速率α的作用：
 
-![https://img-blog.csdn.net/20180916150733683?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/30.png?raw=true)
 
 如果α太小，就会用一个比较小的系数来更新，梯度下降可能就会很慢，就需要很多步才能到达全局最低点。
 
 如果α太大，如图所示，那么梯度下降可能会越过最低点，甚至可能无法收敛或者发散。
 
-![https://img-blog.csdn.net/20180916151257490?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/31.png?raw=true)
 
 如果θ1已经处在一个局部最优点，局部最优点的导数为0，而在梯度下降更新过程中，θ1更新为θ1-α*0，所以θ1将不会改变。即如果参数已经处于局部最低点，那么梯度下降法更新其实什么都没做，它不会改变参数的值，它使解始终保持在局部最优点。这也解释了，即使学习速率α保持不变，梯度下降法也可以收敛到局部最低点的原因。
 
 我们来看一个例子：
 
-![https://img-blog.csdn.net/20180916152253830?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/32.png?raw=true)
 
 首先在品红色的那个点初始化θ1的值，然后用梯度下降法一步步更新，你会发现，越接近最低点，斜率越小，导数也就越小，逐渐接近于0。所以随着梯度下降法的进行，移动的幅度会自动变得越来越小，直到最终移动幅度非常小，你会发现，已经收敛到了局部最小值，这就是梯度下降的运行方式。所以实际上没有必要再另外减小α，这就是梯度下降算法。你可以用它来尝试最小化任何代价函数J，而不只是线性回归中的代价函数J。
 
@@ -184,25 +184,25 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 现在我们将梯度下降和线性回归结合，得到线性回归的算法，它可以用直线模型来拟合数据。下图是梯度下降法和线性回归模型（包括线性假设和平方差代价函数），我们要做的就是将梯度下降法应用到最小化平方差代价函数。
 
-![https://img-blog.csdn.net/20180917085852219?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/33.png?raw=true)
 
 为了应用梯度下降法，关键步骤就是求出左边式子中的导数项。因此我们需要知道这个偏导数项是什么，J(θ0,θ1)对θ0和θ1的偏导数如下：
 
-![https://img-blog.csdn.net/20180917090405360?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/34.png?raw=true)
 
 那么梯度下降算法就可以写成下面这种形式，这就是线性回归算法：
 
-![https://img-blog.csdn.net/20180917090609310?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/35.png?raw=true)
 
 这个算法也叫批量梯度下降法(batch gradient descent)，就是不断重复这个步骤，直到得到最优值。
 
-![https://img-blog.csdn.net/20180917091233142?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/36.png?raw=true)
 
 执行梯度下降时，根据你的初始值的不同，可能会得到不同的局部最优解。
 
 但线性回归的代价函数总是一个弓状函数，术语叫做凸函数。这个函数没有局部最优解，只有一个全局最优解。当你计算这种代价函数的梯度下降的时候，只要你使用线性回归，它总会收敛到全局最优，因为没有全局最优解之外的局部最优解。
 
-![https://img-blog.csdn.net/20180917091716299?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/37.png?raw=true)
 
 
 
