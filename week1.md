@@ -26,7 +26,7 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 假设你拥有下面的这些房价数据，图表上的每一个点代表一次交易，横坐标代表交易房屋的占地面积，纵坐标代表交易房屋的价格（单位是千美元）。
 
-![https://img-blog.csdn.net/20180914145658546?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/1.png]
 
 现在让你预测一个750平方英尺的房屋的交易价格可能是多少？学习算法能做到的一件事就是根据数据画一条直线来拟合这些数据，然后根据这条直线来进行预测。但是这不是能使用的唯一的学习算法，在此例子中，可能会有一个更好的学习算法，例如用二次函数或二阶多项式看起来能够模拟得更好。
 
