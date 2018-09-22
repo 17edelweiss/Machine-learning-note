@@ -30,21 +30,21 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 现在让你预测一个750平方英尺的房屋的交易价格可能是多少？学习算法能做到的一件事就是根据数据画一条直线来拟合这些数据，然后根据这条直线来进行预测。但是这不是能使用的唯一的学习算法，在此例子中，可能会有一个更好的学习算法，例如用二次函数或二阶多项式看起来能够模拟得更好。
 
-![https://img-blog.csdn.net/201809141507276?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/2.png?raw=true)
 
 监督学习是指，我们给算法一个数据集，其中包含了正确答案，也就是说我们给它一个房价数据集，在这个数据集中的每个样本，我们都给出正确的价格，即这个房子的实际卖价，算法的目的就是给出更多的正确答案，例如通过算法预测房价为750平方英尺的房子的价格。用更专业的术语来定义，这个问题也被称为回归问题，回归问题就是指**预测一个连续的值**。
 
-![https://img-blog.csdn.net/20180914152158467?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/3.png?raw=true)
 
 下面是另一种监督学习的例子：
 
 假设你想看医疗记录，并且设法预测乳腺癌是恶性的还是良性的，假设某人发现了一个乳腺肿瘤，即乳房上的肿块，恶性肿瘤就是有害的且危险的，良性肿瘤就是无害的。横轴是肿瘤的尺寸，纵轴的1代表恶性，0代表良性。机器学习的问题就是让你根据粉色点所处的肿瘤尺寸，计算肿瘤是良性的还是恶性的概率。用更专业的术语来说，这就是一个分类问题，分类是指**设法预测一个离散值**。这个例子中，只有一个特征或者说是只有一个属性，即通过肿瘤的大小这一个属性来预测肿瘤是恶性的还是良性的。
 
-![https://img-blog.csdn.net/20180914164410611?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/4.png?raw=true)
 
 在其他的机器学习问题中，可能会有多个特征，多个属性，例如现在假设我们不仅知道肿瘤的大小，还知道病人的年纪。以O代表良性肿瘤，用X代表恶性肿瘤。横轴代表肿瘤的大小，纵轴代表病人的年纪。
 
-![https://img-blog.csdn.net/20180914164732690?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/5.png?raw=true)
 
 对于这种有多个特征的数据集，学习算法能够做的就是在数据上画出一条直线，设法将恶性肿瘤和良性肿瘤分开。这样对于紫色的点，通过这种方式，你的学习算法就会认为，这个肿瘤位于良性区域，因此这个肿瘤是良性的机率比恶性的大。
 
@@ -54,11 +54,11 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 对于监督学习中的每一个样本，我们已经被清楚地告知了什么是所谓的正确答案，即它们是良性还是恶性，而在无监督学习中，我们所用的数据没有任何的标签，或者是都具有相同的标签或者都没有标签，我们拿到这个数据集，但我们却不知道要拿它来做什么，也不知道每个数据点究竟是什么，我们只是知道有一个这样的数据集，例如下面这幅图，对于给定的数据集，无监督学习算法可能判定该数据集包含两个不同的簇，无监督学习算法可以把这些数据分成两个不同的簇，这就是聚类算法。聚类算法被应用在很多地方，其中一个应用聚类算法的例子就是谷歌新闻，谷歌新闻所做的就是每天去网络上，收集几万条甚至几十万条新闻，然后将它们组合成一个个新闻专题，谷歌新闻所做的就是去搜索成千上万条新闻，然后自动将它们分簇，有关同一主题的新闻被显示在一起。
 
-![https://img-blog.csdn.net/20180914214933987?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/6.png?raw=true)
 
 其实聚类算法和无监督学习算法也可应用到许多其他的问题，例如它在基因组学中的应用，下图是一个DNA微阵列数据的例子，给定一组不同的个体，对于每个个体，检测他们是否拥有某个特定的基因，也就是检测特定基因的表达程度，这些红，灰，绿等颜色展示了不同个体拥有特定基因的程度，然后你需要做的就是运行一个聚类算法，把不同的个体归入不同的类也就是归为不同类型的人，这就是无监督学习。因为我们只知道这里有一堆数据，但是不知道这些数据是什么，不知道每一个是哪一个类型，甚至不知道有哪些类型。因为我们没有把数据集的所谓的“正确答案”给算法，所以这就是无监督学习。
 
-![https://img-blog.csdn.net/20180914215834553?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/7.png?raw=true)
 
 ## 2.   Linear regression with one  variable（单变量线性回归）：
 
@@ -66,13 +66,13 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 让我们先来看之前那个预测住房价格的例子，假设你一个朋友有一套大小为1250平方英尺大小的房子，他想要让你帮他预测这个房子能卖多少钱？你可以用一条直线来拟合这组数据，根据这个模型，你可以告诉你的朋友，他的房子也许可以卖到220000美元左右。这是一个监督学习算法的例子，它之所以是监督学习，是因为每一个例子都有一个“正确的答案”，也就是说我们知道数据集中所卖的房子的实际大小和价格，而且这也是一个回归问题的例子，回归是指预测一个具体的数值输出，也就是房子的价格。另一种最常见的监督学习问题被称为分类问题，用来预测离散值的输出，例如我们观察肿瘤，并试图判断它是良性的还是恶性的。
 
-![https://img-blog.csdn.net/20180915115357701?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/8.png?raw=true)
 
 更正式一点说，在监督学习里，我们有一个数据集，它被称为一个训练集（Training Set），以住房价格为例，我们有一个房价的训练集，我们的工作是从这个数据中，学习如何预测房价。
 
 下面将定义一些符号将更有利于理解：
 
-![https://img-blog.csdn.net/20180915162410546?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/9.png?raw=true)
 
 **m：表示训练样本的数量，也就是训练集中的实例数量。**
 
@@ -88,29 +88,28 @@ Tom Mitchell在1998年提出了一个更新的定义：**计算机程序从经�
 
 向学习算法提供训练集，比如说房价训练集，学习算法的任务是输出一个函数，通常用小写字母h表示，h代表假设函数，在房价预测的例子中假设函数的作用是，把房子的大小作为输入变量，将它作为x的值，然后输出这个房子预测的y值，h是一个从x映射到y的函数。在这个例子中，假设函数是预测y是关于x的线性函数。**hθ(x)也可以简写为h(x)。**
 
-![https://img-blog.csdn.net/20180915163516220?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/10.png?raw=true)
 
 ### 2.2 Cost  funcion（代价函数）：
 
 代价函数是为了帮助我们弄清楚如何把最有可能的直线与我们的数据相拟合。
 
-例如我们有一个这样的训练集，m代表了训练样本的数量，假设m=47，我们的假设函数是![https://img-blog.csdn.net/20180915164550750?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+例如我们有一个这样的训练集，m代表了训练样本的数量，假设m=47，我们的假设函数是![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/11.png?raw=true)
 这些θ0和θ1我们把它们称为模型参数，我们需要做的就是通过选择合适的θ0和θ1，使得误差尽量的小。选择不同的θ0和θ1，会得到不同的假设函数，例如可以选择下图中的这些θ0和θ1。
 
-![https://img-blog.csdn.net/20180915165313682?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/12.png?raw=true)
 
 在线性回归中，我们有一个训练集，我们要做的就是得出θ0和θ1这两个参数的值，使得假设函数所表示的直线尽量地与这些数据点能够很好的拟合，例如就像下图中的这一条直线，那么如何求出θ0和θ1的值来使它很好地拟合数据呢？
 
-![https://img-blog.csdn.net/20180915172348636?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/13.png?raw=true)
 
-我们的想法是，我们需要选择能使h(x)，也就是输入x时，我们预测的值最接近该样本对应的y值的参数θ0和θ1。所以，在我们的训练集中我们会得到一定数量的样本，我们知道x表示卖出哪所房子，并且知道卖出的这所房子的实际交易价格。所以我们要尽量选择合适的参数值，使得在训练集中，对于给出的训练集中的x值，我们能够合理准确地预测y的值。接下来给出标准的定义，在线性回归中，我们要解决的实际上是一个最小化的问题，我们要做的就是尽量减少假设输出与房子的真实交易价格之间的差的平方。所以我们要做的就是对所有的训练样本进行一个求和，将第i号对应的预测结果减去第i号房子的实际交易价格所得的差的平方相加得到一个总和，而我们希望这个总和能够尽可能的小，也就是预测值和实际值的差的平方误差和或者说预测价格和实际卖出价格的差的平方。为了让表达式的数学意义变得容易理解一点，实际上考虑的是所求误差和的1/m，也就是我们要尝试尽量减少平均误差，也就是尽量减少其1/(2*m)，即通常是平均误差的一半，这只是为了使数学意义更直白一些，因此对这个求和值的1/2求最小值，也能够得到相同的θ0和θ1。所以代价函数可以表示为
-![https://img-blog.csdn.net/20180915171629331?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+我们的想法是，我们需要选择能使h(x)，也就是输入x时，我们预测的值最接近该样本对应的y值的参数θ0和θ1。所以，在我们的训练集中我们会得到一定数量的样本，我们知道x表示卖出哪所房子，并且知道卖出的这所房子的实际交易价格。所以我们要尽量选择合适的参数值，使得在训练集中，对于给出的训练集中的x值，我们能够合理准确地预测y的值。接下来给出标准的定义，在线性回归中，我们要解决的实际上是一个最小化的问题，我们要做的就是尽量减少假设输出与房子的真实交易价格之间的差的平方。所以我们要做的就是对所有的训练样本进行一个求和，将第i号对应的预测结果减去第i号房子的实际交易价格所得的差的平方相加得到一个总和，而我们希望这个总和能够尽可能的小，也就是预测值和实际值的差的平方误差和或者说预测价格和实际卖出价格的差的平方。为了让表达式的数学意义变得容易理解一点，实际上考虑的是所求误差和的1/m，也就是我们要尝试尽量减少平均误差，也就是尽量减少其1/(2*m)，即通常是平均误差的一半，这只是为了使数学意义更直白一些，因此对这个求和值的1/2求最小值，也能够得到相同的θ0和θ1。所以代价函数可以表示为![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/14.png?raw=true)
 
 所以我们要做的就是对J(θ0,θ1)求最小值，这就是代价函数。代价函数也被称作平方误差函数，有时也被称为平方误差代价函数，事实上，之所以要求出误差的平方和，是因为误差平方代价函数对于大多数问题，特别是回归问题，都是一个合理的选择，当然还有其他的代价函数也能很好地发挥作用，但是平方误差代价函数可能是解决回归问题最常用的手段了。
 
 为了更好地使代价函数J可视化，使用一个简化的假设函数h，设θ0=0，则h(x) = θ1 * x。使用简化的代价函数便于更好的理解代价函数的概念。
 
-![https://img-blog.csdn.net/20180916090156208?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMzExNjA0/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70]
+![](https://github.com/17edelweiss/Machine-learning-note/blob/master/File1/15.png?raw=true)
 
 下图(左)中的红色X代表房子实际交易价格，θ0=0时，假设函数是过原点的直线，对于每一条假设函数，它的预测值和实际值的差的平方也就是下图(左)中蓝色竖线的长度的平方。在下图(右)做出相应的代价函数J(θ1)的图像，显然，当θ1=1时，J(θ1)最小。
 
